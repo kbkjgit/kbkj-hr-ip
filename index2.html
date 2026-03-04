@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Responsive Page</title>
+    <style>
+        :root {
+    --bg-color: #121212; /* Deep black for background */
+    --text-color: #e0e0e0; /* Off-white for text */
+    --button-bg: #007bff; /* Button background color */
+    --button-hover-bg: #0056b3; /* Button hover color */
+    --container-bg: #1e1e1e; /* Slightly lighter black for container */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
+}
+
+.container {
+    background-color: var(--container-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+}
+
+.button {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none; /* Removes underline from links */
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1 1 auto; /* Allows buttons to grow and shrink responsively */
+    width: 90%; /* Minimum width for buttons before wrapping */
+}
+
+.button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Media query for smaller screens, if further adjustment is needed */
+@media (max-width: 480px) {
+    .button-container {
+        flex-direction: column; /* Stacks buttons vertically on very small screens */
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to KBKJ-HR Page</h1>
+        <p>This is a responsive webpage with a dark theme.</p>
+        
+        <div class="button-container">
+            <!-- Use <a> tags styled as buttons to link to other pages -->
+            <a href="http://10.90.100.163/WebTimeOnline/default1m.aspx" class="button">Tiger Soft การลา และ โอที</a>
+            <a href="http://10.90.100.163/WebSlip/Form/WebSlip.aspx" class="button">Tiger Soft Slip</a>
+            <a href="https://kbkjgit.github.io/kbkj-slip/" class="button">ดาวน์โหลดเอิกสารสลิปเงินเดือน</a>
+            <a href="http://10.90.100.163/whtax" class="button">ดาวน์โหลดเอกสารหักภาษี ณ ที่จ่าย</a>
+          <a href="https://kbkjgit.github.io/kbkj-slip/" class="button">ดาวน์โหลดเอิกสารสลิปเงินเดือน</a>
+        </div>
+    </div>
+</body>
+</html>
